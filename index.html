@@ -105,6 +105,7 @@ h1{color:#242a24}
 @media(max-width:560px){.brand-logo{width:min(74vw,240px);margin-bottom:14px}}
 @media print{.shell{max-width:none;padding:0}body{background:#fff}.grid{display:block}.top{display:block;min-height:auto;background:none;padding:0 0 10px;border:0}.brand-logo{width:170px;margin:0 0 10px}.eyebrow,.lead,.badge{display:none!important}.top h1{font-size:22px;margin:0}.card{border:0;box-shadow:none;background:#fff;padding:0;margin:0}aside.card,.panel-title,.guide,.note,.register-launch,#registration-area,.viz,.actions,.print-hide{display:none!important}.result-head h2{font-size:18px}.summary{grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}.metric{background:#fff;border-color:#cfd8c6}.table-wrap{overflow:visible}.table{width:100%}.table th,.table td{border-color:#c9d3c0}.table tr{page-break-inside:avoid}.footer{display:block}}
 </style>
+<script src="./config.js"></script>
 </head>
 <body>
 <main class="shell">
@@ -128,8 +129,8 @@ h1{color:#242a24}
 </main>
 <script>
 const STORAGE_KEY='firmafloor.modelos.v1';
-const SUPABASE_URL='https://apqvgtmzjkcmouxumrrm.supabase.co';
-const SUPABASE_KEY='sb_publishable_MLqofJDnNE9HCi6QSzQCyg_23Npd1Ly';
+const SUPABASE_URL=(window.FIRMAFLOOR_CONFIG&&window.FIRMAFLOOR_CONFIG.supabaseUrl)||'https://apqvgtmzjkcmouxumrrm.supabase.co';
+const SUPABASE_KEY=(window.FIRMAFLOOR_CONFIG&&window.FIRMAFLOOR_CONFIG.supabasePublishableKey)||'sb_publishable_MLqofJDnNE9HCi6QSzQCyg_23Npd1Ly';
 const SUPABASE_TABLE='floor_models';
 const SYNC_QUEUE_KEY=STORAGE_KEY+'-sync-queue';
 const SYNC_TIMEOUT_MS=10000;
